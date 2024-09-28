@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexible Classroom Layout</title>
+    <link rel="stylesheet" type="text/css" href="layout_style.css">
+</head>
+<body>
+    <h1>Flexible Classroom Layout</h1>
+   <div id="buttons">
+    <!-- Dropdown Menu for Layout Selection -->
+    <label for="layoutSelect">Choose a layout:</label>
+    <select id="layoutSelect" onchange="storeLayout()">
+        <option value="2-2-2">De dos en dos Layout</option>
+        <option value="1-1">De uno en uno</option>
+        <option value="3-3">De tres en tres</option>
+        <option value="2-2-2">Por defecto (de dos en dos)</option>
+    </select>
+
+
+    <input type="file" id="fileInput" accept=".txt">
+    <button onclick="loadStudents()">Load Students</button>
+    
+    <!-- Export to PDF Button -->
+    <button id="export-button" onclick="exportToPDF()">Export to PDF</button>
+
+    <!-- Add the shuffle button -->
+    <button onclick="shuffleRemainingStudents()">Shuffle Remaining Students</button>
+
+    <!-- Draggable empty icon container (you can drag multiple crosses from here) -->
+    <button class="empty-icon-btn" draggable="true" ondragstart="dragEmpty(event)">❌</button>
+
+   </div>
+
+  
+   <div id="main-container">
+   <div id="whole-classroom">
+    
+    <!-- Teacher's desk -->
+    <div class="teacher-desk">Paula's Desk</div>
+    
+    <!-- Classroom layout grid where desks will be placed -->
+    <div id="classroom"></div>
+    </div>
+    <!-- List of students to be assigned to desks -->
+    <div id="students" class="students"></div>
+    </div>
+    <!-- Include html2canvas library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Include jsPDF library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <script src="classroom_layout.js"></script>
+
+
+
+</body>
+</html>
+
