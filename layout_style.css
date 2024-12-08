@@ -81,9 +81,11 @@ body {
 #export-button {
     margin-top: 20px;
 }
+
 .teacher-desk {
     width: 100px;
     height: 100px;
+    right: 0px;
     border: 1px solid #000;
     background-color: lightgreen;
     display: flex;
@@ -91,7 +93,7 @@ body {
     text-align: center;
     justify-content: center;
     cursor: default; /* No drag for teacher's desk */
-    margin-left: 20px;
+    margin-left: 700px;
     margin-right: 20px;
     margin-top: 20px;
     margin-bottom: 20px; /* Space between teacher's desk and rows */

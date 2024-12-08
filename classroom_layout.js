@@ -11,6 +11,8 @@ function storeLayout() {
     selectedLayout = [2, 2, 2]; // 2+2+2 layout
   } else if (layoutSelect === "3-3") {
     selectedLayout = [3, 3]; // 3+3 layout
+  } else if (layoutSelect === "2-3") {
+    selectedLayout = [2, 3]; // 3+3 layout
   } else if (layoutSelect === "1-1") {
     selectedLayout = [1,  1, 1, 1]; // 4+2 layout
   } else {
