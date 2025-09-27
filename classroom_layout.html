@@ -20,7 +20,7 @@
     </select>
 
 
-    <input type="file" id="fileInput" accept=".txt">
+    <input type="file" id="fileInput" accept=".txt,.csv">
     <button onclick="loadStudents()">Load Students</button>
     
     <!-- Export to PDF Button -->
@@ -39,7 +39,9 @@
    <div id="whole-classroom">
     
     <!-- Teacher's desk -->
-    <div class="teacher-desk">Mesa del profesor</div>
+    <div id="dropzone-teacher">
+       <div  id="teacher-desk" draggable="true" ondragstart="move_teacher()" >Mesa del profesor</div>
+    </div>
     
     <!-- Classroom layout grid where desks will be placed -->
     <div id="classroom"></div>

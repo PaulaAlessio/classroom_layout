@@ -20,7 +20,34 @@ function storeLayout() {
   }
 }
 
+// Allow teachers desk to be moved 
+function move_teacher() {
+var teacher_desk = document.getElementById("teacher-desk");
+var dropzone_teacher = document.getElementById("dropzone-teacher");
 
+teacher_desk.addEventListener("dragstart", e => {
+  e.dataTransfer.setData("text/plain", "dragging");
+});
+
+dropzone_teacher.addEventListener("dragover", e => {
+  e.preventDefault(); // serve per permettere il drop
+});
+
+dropzone_teacher.addEventListener("drop", e => {
+  e.preventDefault();
+
+  const rect = dropzone_teacher.getBoundingClientRect();
+  const middle = rect.left + rect.width / 2;
+
+  if (e.clientX < middle) {
+    // allinea a sinistra
+    teacher_desk.style.left = "0";
+  } else {
+    // allinea a destra
+    teacher_desk.style.left = (rect.width - 1.5*teacher_desk.offsetWidth) + "px";
+  }
+});
+}
 
 // Drag function to pick up desk or student
 function drag(event) {

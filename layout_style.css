@@ -72,7 +72,7 @@ body {
 .student {
     padding: 5px;
     background-color: #8cbed6;
-    color: white;
+    color: black;
     text-align: center;
     border-radius: 5px;
     cursor: move;
@@ -82,7 +82,7 @@ body {
     margin-top: 20px;
 }
 
-.teacher-desk {
+#teacher-desk {
     width: 100px;
     height: 100px;
     right: 0px;
@@ -92,13 +92,23 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-    cursor: default; /* No drag for teacher's desk */
+    cursor: move; /* No drag for teacher's desk */
+    position: relative;
     margin-left: 20px;
     margin-right: 700px;
     margin-top: 20px;
     margin-bottom: 20px; /* Space between teacher's desk and rows */
 }
 
+#dropzone-teacher{
+  width: 850px;
+  height: 150px;
+  margin-top: 20px;
+  margin-left: 20px;
+  /*background: lightgray;*/
+  position: relative;
+  /*border: 2px dashed gray;*/
+}
 .empty-icon-btn {
     font-size: 16px;
     padding: 5px 10px;
